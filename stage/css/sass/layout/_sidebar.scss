@@ -1,0 +1,81 @@
+.page {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    padding: 15px;
+    color: #fff;
+    background-color: $sidebar-bg;
+    transition: .5s all ease-in-out;
+    z-index: 11;
+      
+    h3{float: $left;}
+    
+    .fa-times {
+      cursor: pointer;
+      font-size: 20px;
+      float: $right;
+      transition: .4s all ease-in-out;
+    }
+    
+    .fa-times:hover {color: $mainColor;}
+    
+    .sidebar-pages-menu{
+      padding: 30px 30px 15px 10px;
+      li{
+        padding: 10px 0 ;
+        border-bottom: 1px solid rgba(160, 160, 160, 0.28);
+        
+        a {color: #fff;}
+        a:hover{color: $mainColor;}
+      }
+    }
+    
+    
+    ul.sidebar-settings-menu{
+      @extend .sidebar-pages-menu;
+      li {
+        position: relative;
+        span.dark-toggle {
+          background-color: $grey-bg;
+          width: 40px;
+          height: 20px;
+          top: 12px;
+          right: 45px;
+          position: absolute;
+          border-radius: 10px;
+          transition: .5s all ease-in-out; 
+          cursor: pointer;
+          .toggle-btn-front, .toggle-btn-back {
+            position: absolute;
+            background-color: $mainColor;
+            height: 100%;
+            width: 50%;
+            border-radius: 10px;
+            border: 1px solid $divider;
+            float: $left;
+          }
+          .toggle-btn-back {
+            background-color: $sub-mainColor;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

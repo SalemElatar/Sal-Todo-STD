@@ -1,0 +1,30 @@
+include pug/vars/identity.pug
+doctype html
+html(lang="en")
+  head 
+    include pug/layout/meta
+    include pug/layout/styles
+    
+    
+  body
+    //Start Home Page
+    .page.homepage
+    
+      //Start Sidebar
+      include pug/layout/sidebar
+      //End Sidebar
+      
+      //Start Content Area
+      .content-area
+        .container
+          //Full Screen Overlay div
+          .full-scrn-overlay
+          i.fas.fa-bars.show-sidebar
+          h1 #{brandName}
+      //End Content Area
+      
+    //End Home Page
+    
+    
+    
+    include pug/layout/scripts.pug

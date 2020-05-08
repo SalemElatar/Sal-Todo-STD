@@ -1,0 +1,6 @@
++ Find Out how to edit title name with Pug Variables  ===>
+- install gulp  package called gulp-new ,  watch new created files
++ edit sidebar left to -250px to toggel{{"_file":"C:/Users/Salem/Desktop/Ultimate-bio/stage/css/sass/layout/_sidebar.scss"}}
++ edit js main file - edit toggel{{"_file":"C:/Users/Salem/Desktop/Ultimate-bio/stage/js/main.js"}}
+- لما النت  يرجع شوف ازاي تعمل توجل لزرار الدارك موود علشان لما تدوس عليه مرة تانية  يرجع لشكله الاول تاني
+
