@@ -3,7 +3,10 @@
   font-family: Franklin Gothic; //for main heading
 }
 
-body {height: 3000px;}
+body {
+  height: 3000px;
+  background-color: $body-bg;
+}
 
 a{transition: .4s color ease-in-out;}
 
@@ -23,12 +26,11 @@ ul {
 
 
 .page {
-  min-height: 100vh;
 
   .content-area {
     transition: .3s;
     position: relative;
-    
+    min-height: 100vh;
     .full-scrn-overlay {
       position: fixed;
       background-color: rgba(0, 0, 0, .4);
