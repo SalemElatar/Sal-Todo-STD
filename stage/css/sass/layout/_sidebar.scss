@@ -2,52 +2,103 @@
   .sidebar {
     position: fixed;
     height: 100%;
-    left: -250px;
+    left: -250px ; 
     top: 0;
     width: 250px;
     padding: 15px;
     color: #fff;
     background-color: $sidebar-bg;
-    transition: .5s all ease-in-out;
+    transition: $text-hover ;
     z-index: 11;
-      
-    h3{float: $left;}
+    &.show-sidebar{
+      left:0;
+    }
+    
+    h3{
+      float: $left;
+      a, a:hover{color:#fff}
+    }
     
     .fa-times {
       cursor: pointer;
       font-size: 20px;
       float: $right;
-      transition: .4s all ease-in-out;
+      @include text-hover();
     }
-    
-    .fa-times:hover {color: $mainColor;}
     
     .sidebar-pages-menu{
       padding: 30px 30px 15px 10px;
+      height: 390px;
+      margin: 0;
+
+      //All Links
       li{
-        padding: 10px 0 ;
-        border-bottom: 1px solid rgba(160, 160, 160, 0.28);
-        
-        a {color: #fff;}
-        a:hover{color: $mainColor;}
+        padding: 5px 0;
+        position: relative;
+        @include text-hover();
+        &:hover{
+          a{color: $mainColor;}
+        }
+        a {
+          transition: $text-hover;
+          color: #fff;
+          display: block;
+          .main-links-icn{
+            padding-right:7px ;
+          }
+        }
+
+        //Sub Links
+        .sidebar-subPages-menu{
+          display: none;
+          padding-top: 10px;
+          li{
+            padding-left: 20px;
+            border-left: 3px solid $greyColor;
+            &:hover{
+              border-left: 3px solid $mainColor;
+              a{color: $mainColor;}
+            }
+            a{
+              color:$greyColor;
+            }
+          }
+        }
+      }
+
+      //main Links
+      > li{
+        padding: 10px 0;
+        a{
+          .fa-angle-right{
+            transition: .4s transform ease-in-out;
+            float: $right;
+            top: 5px;
+            position: relative;
+            &.toggle-subPages{
+              transform: rotate(90deg);
+            }
+          }
+        }
       }
     }
     
     
     ul.sidebar-settings-menu{
       @extend .sidebar-pages-menu;
+      padding-top: 0px;
       li {
-        position: relative;
-        span.dark-toggle {
+        //Dark mode button settings
+        span.dark-btn {
+          cursor: pointer;
           background-color: $grey-bg;
           width: 40px;
           height: 20px;
+          position: absolute;
           top: 12px;
           right: 45px;
-          position: absolute;
           border-radius: 10px;
-          transition: .5s all ease-in-out; 
-          cursor: pointer;
+
           .toggle-btn-front, .toggle-btn-back {
             position: absolute;
             background-color: $mainColor;
@@ -56,12 +107,18 @@
             border-radius: 10px;
             border: 1px solid $divider;
             float: $left;
+            transition: .5s all ease-in-out;
           }
+          .toggle-btn-front{right: 20px;}
           .toggle-btn-back {
             background-color: $sub-mainColor;
-            position: absolute;
             left: 0;
             z-index: -1;
+          }
+
+          &.dark-toggle{
+            .toggle-btn-back{width: 100%;}
+            .toggle-btn-front{right: 0;}
           }
         }
       }

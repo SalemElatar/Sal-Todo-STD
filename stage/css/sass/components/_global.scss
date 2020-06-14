@@ -12,25 +12,22 @@ a{transition: .4s color ease-in-out;}
 
 a:hover, a:focus {text-decoration: none;}
 
-ul {
-  padding: 0;
-  li {
-    list-style: none;
-  }
-}
-
 .clear {clear: both;}
 
 .mainColor {color: $mainColor}
 
-
-
 .page {
-
   .content-area {
-    transition: .3s;
     position: relative;
     min-height: 100vh;
+    float: $right;
+    padding:20px 30px ;
+    transition: .3s;
+    will-change: width;
+    width: 100%; //edit this calc(100% - 250px)
+    &.show-sidebar{
+      width: calc(100% - 250px);
+    }
     .full-scrn-overlay {
       position: fixed;
       background-color: rgba(0, 0, 0, .4);
@@ -41,11 +38,6 @@ ul {
       z-index: 10;
       display: none;
       transition: 1s all ease-in-out;
-    }
-    
-    .show-sidebar {
-      font-size: 20px;
-      cursor: pointer;
     }
   }
 }

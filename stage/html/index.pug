@@ -16,11 +16,12 @@ html(lang="en")
       
       //Start Content Area
       .content-area
-        .container
+          //.container
           //Full Screen Overlay div
           .full-scrn-overlay
-          i.fas.fa-bars.show-sidebar
-          h1 #{brandName}
+          include pug/layout/header
+          .content
+            h1 #{brandName}
       //End Content Area
       
     //End Home Page

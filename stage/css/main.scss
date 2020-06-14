@@ -1,8 +1,13 @@
 @import 'sass/vars/lrvars';
 @import 'sass/vars/colors';
+@import 'sass/vars/hover';
+@import 'sass/helpers/mixins';
+
+
 
 @import 'sass/components/global';
 @import 'sass/components/headings';
 @import 'sass/components/text';
 
+@import 'sass/layout/header';
 @import 'sass/layout/sidebar';

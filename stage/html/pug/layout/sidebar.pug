@@ -1,32 +1,49 @@
 .sidebar
-  h3 
-    span.mainColor U
-    |ltimate 
-    span.mainColor B
-    |io 
-  //#{brandName}
-  
+  h3
+    a(href="#")  
+      span.mainColor U
+      |ltimate 
+      span.mainColor B
+      |io 
+     
   i.fas.fa-times
   .clear
   
-  ul.sidebar-pages-menu
+  ul.list-unstyled.sidebar-pages-menu
     li 
-      a(href="#") Home
+      a(href="#")
+        i.fas.fa-home.main-links-icn
+        |Home
     li 
-      a(href="#") Biographies
+      a(href="#")
+        i.fas.fa-id-card.main-links-icn
+        |Reviewes
+        i.fas.fa-angle-right
+      ul.list-unstyled.sidebar-subPages-menu
+        li 
+          a(href="#") Films
+        li 
+          a(href="#") series
+        li 
+          a(href="#") anime
+
     li 
-      a(href="#") islamic Bios
-    li 
-      a(href="#") Battles
-    li 
-      a(href="#") rock history
-    li 
-      a(href="#") cinema history
+      a(href="#")
+        i.fas.fa-id-card.main-links-icn
+        |Articels &amp; Lists
+        i.fas.fa-angle-right
+      ul.list-unstyled.sidebar-subPages-menu
+        li 
+          a(href="#") textarea
+        li 
+          a(href="#") input
+        li 
+          a(href="#") check box
       
       
-  ul.sidebar-settings-menu
+  ul.list-unstyled.sidebar-settings-menu
     li Dark mode
-      span.dark-toggle
+      span.dark-btn
         span.toggle-btn-front
         span.toggle-btn-back
         
@@ -36,9 +53,3 @@
       a(href="#") about us
     li
       a(href="#") help
-      
-      
-      
-        
-        
-        

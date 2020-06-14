@@ -1,0 +1,4 @@
+@mixin text-hover() {
+    transition: $text-hover ;
+    &:hover {color: $mainColor;}
+}

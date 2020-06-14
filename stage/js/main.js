@@ -1,43 +1,25 @@
 $(function () {
   "use strict";
-  
-  /*show SideBar*/
-  $('.content-area .show-sidebar').on("click", function () {
-    $('.sidebar').animate({
-      left: "0"
-    }, 200);
-    $('.content-area .full-scrn-overlay').css('display', 'block');
+
+  //show SideBar
+  $('.content-area .toggle-sidebar, .page .sidebar .fa-times').on("click", function () {
+    $('.page .sidebar, .page .content-area').toggleClass('show-sidebar');
   });
-  
-  /*Hide SideBar*/
-  $('.sidebar .fas.fa-times').on("click", function () {
-    $('.sidebar').animate({
-      left: "-250"
-    }, 200);
-    $('.content-area .full-scrn-overlay').css('display', 'none');
+
+
+  //toggle Sidebar sub pages 
+  $('.sidebar-pages-menu li a').on("click", function () {
+    $(this).next('.sidebar-subPages-menu').slideToggle();
+    $(this).find('.fa-angle-right').toggleClass('toggle-subPages')
   });
-  
-  $('.content-area .full-scrn-overlay').on("click", function () {
-    $('.sidebar').animate({
-      left: "-250"
-    }, 200);
-    
-    $(this).css('display', 'none');
-  });
-  
-  
-  
-  
+
+
+
   //Dark Theme toggle  button
-  $('.sidebar-settings-menu .dark-toggle').on("click", function () {
-    $('.dark-toggle .toggle-btn-back').animate({
-      width: "100%"
-    }, 500);
-    $('.dark-toggle .toggle-btn-front').animate({
-      right: "0"
-    }, 500);
+  $('.sidebar-settings-menu .dark-btn').on("click", function () {
+    $(this).toggleClass('dark-toggle')
   });
-  
+
   
   
   
