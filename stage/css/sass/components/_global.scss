@@ -8,6 +8,12 @@ body {
   background-color: $body-bg;
 }
 
+//ScrollBar
+::-webkit-scrollbar {width: 7px;}
+::-webkit-scrollbar-track {background: #394362;}
+::-webkit-scrollbar-thumb {background: $mainColor;}
+::-webkit-scrollbar-thumb:hover {background:#88cb5e ;}
+
 a{transition: .4s color ease-in-out;}
 
 a:hover, a:focus {text-decoration: none;}

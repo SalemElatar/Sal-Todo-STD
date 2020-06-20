@@ -1,5 +1,6 @@
 .page {
   .sidebar {
+    overflow-y: scroll;
     position: fixed;
     height: 100%;
     left: -250px ; 
@@ -28,8 +29,8 @@
     
     .sidebar-pages-menu{
       padding: 30px 30px 15px 10px;
-      height: 390px;
       margin: 0;
+      margin-bottom: 20px;
 
       //All Links
       li{
@@ -62,6 +63,13 @@
             a{
               color:$greyColor;
             }
+          }
+        }
+
+        //last sub menu open by defult
+        &:last-of-type{
+          .sidebar-subPages-menu{
+            display: block;
           }
         }
       }

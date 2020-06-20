@@ -14,12 +14,20 @@ $(function () {
   });
 
 
+  //Dark Theme toggle
+  function darkToggle() {
+    if ($('.sidebar-settings-menu .dark-btn').hasClass('dark-toggle')) {
+      $("html, body").css({'color': '#fff', 'background-color': '#182038'});
+    } else{
+      $("html, body").css({'color': '#000', 'background-color': '#fff'});
+    }
+  }
 
-  //Dark Theme toggle  button
+  darkToggle();
   $('.sidebar-settings-menu .dark-btn').on("click", function () {
-    $(this).toggleClass('dark-toggle')
+    $(this).toggleClass('dark-toggle');
+    darkToggle()
   });
-
   
   
   
