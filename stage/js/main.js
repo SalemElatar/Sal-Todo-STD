@@ -28,12 +28,8 @@ $(function () {
     $(this).toggleClass('dark-toggle');
     darkToggle()
   });
-  
-  
-  
-  
-  
-  
+
+
   
   
 });

@@ -1,2 +1,11 @@
 .header
   i.fas.fa-bars.toggle-sidebar
+  input.form-control(type='text' placeholder='Serch For Note Or To-do')
+
+  .notifications-bell
+    i#notifications.fas.fa-bell.btn(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    .dropdown-menu(aria-labelledby='notifications')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+

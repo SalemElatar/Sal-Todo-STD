@@ -3,10 +3,11 @@
   font-family: Franklin Gothic; //for main heading
 }
 
-body {
-  height: 3000px;
-  background-color: $body-bg;
-}
+
+//Main Classes
+.clear {clear: both;}
+.mainColor {color: $mainColor}
+
 
 //ScrollBar
 ::-webkit-scrollbar {width: 7px;}
@@ -14,14 +15,20 @@ body {
 ::-webkit-scrollbar-thumb {background: $mainColor;}
 ::-webkit-scrollbar-thumb:hover {background:#88cb5e ;}
 
-a{transition: .4s color ease-in-out;}
 
-a:hover, a:focus {text-decoration: none;}
+// Global Elemnts Set
+body {
+  height: 3000px; //Temporary
+  background-color: $body-bg;
+}
 
-.clear {clear: both;}
+a{
+  transition: .4s color ease-in-out;
+  &:hover, &:focus{text-decoration: none;}
+}
 
-.mainColor {color: $mainColor}
 
+//Page, Content area
 .page {
   .content-area {
     position: relative;
@@ -30,20 +37,10 @@ a:hover, a:focus {text-decoration: none;}
     padding:20px 30px ;
     transition: .3s;
     will-change: width;
-    width: 100%; //edit this calc(100% - 250px)
+    width: 100%; //edit this to... calc(100% - 250px)
     &.show-sidebar{
       width: calc(100% - 250px);
     }
-    .full-scrn-overlay {
-      position: fixed;
-      background-color: rgba(0, 0, 0, .4);
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 10;
-      display: none;
-      transition: 1s all ease-in-out;
-    }
+    
   }
 }

@@ -10,14 +10,14 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <!--Start Home Page-->
+    <!--Start HomePage-->
     <div class="page homepage">
       <!--Start Sidebar-->
       <div class="sidebar show-sidebar">
-        <h3><a href="#"> <span class="mainColor">U</span>ltimate <span class="mainColor">N</span>ote</a></h3><i class="fas fa-times"></i>
+        <h1><a href="#"> <span class="mainColor">U</span>ltimate <span class="mainColor">N</span>ote</a></h1><i class="fas fa-times"></i>
         <div class="clear"></div>
         <ul class="list-unstyled sidebar-pages-menu">
-          <li> <a href="#"><i class="fas fa-home main-links-icn"></i>Home</a></li>
+          <li> <a class="active" href="#"><i class="fas fa-home main-links-icn"></i>Today</a></li>
           <li> <a href="#"><i class="fas fa-id-card main-links-icn"></i>Notes<i class="fas fa-angle-right"></i></a>
             <ul class="list-unstyled sidebar-subPages-menu">
               <li> <a href="#">Lable 1</a></li>
@@ -47,20 +47,21 @@
           <li><a href="#">help</a></li>
         </ul>
       </div>
-      <!--End Sidebar-->
-      <!--Start Content Area-->
+      <!--Start Content-Area -->
       <div class="content-area show-sidebar">
-        <!--.container-->
-        <!--Full Screen Overlay div-->
-        <div class="full-scrn-overlay"></div>
-        <div class="header"><i class="fas fa-bars toggle-sidebar"></i></div>
-        <div class="content">
-          <h1>Ultimate Note</h1>
+        <div class="header"><i class="fas fa-bars toggle-sidebar"></i>
+          <input class="form-control" type="text" placeholder="Serch For Note Or To-do">
+          <div class="notifications-bell"><i class="fas fa-bell btn" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu" aria-labelledby="notifications"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="content">
+            <h1>Ultimate Note</h1>
+          </div>
         </div>
       </div>
-      <!--End Content Area-->
     </div>
-    <!--End Home Page-->
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

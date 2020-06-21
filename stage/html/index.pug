@@ -7,25 +7,19 @@ html(lang="en")
     
     
   body
-    //Start Home Page
+    //Start HomePage
     .page.homepage
-    
+
       //Start Sidebar
       include pug/layout/sidebar
-      //End Sidebar
       
-      //Start Content Area
+      //Start Content-Area 
       .content-area.show-sidebar
-          //.container
-          //Full Screen Overlay div
-          .full-scrn-overlay
-          include pug/layout/header
+        include pug/layout/header
+        .container-fluid
           .content
             h1 #{brandName}
-      //End Content Area
-      
-    //End Home Page
-    
+            
     
     
     include pug/layout/scripts.pug
