@@ -1,11 +1,24 @@
-.header
-  i.fas.fa-bars.toggle-sidebar
-  input.form-control(type='text' placeholder='Serch For Note Or To-do')
+.header.row
+  .col-md-1
+    i.fas.fa-bars.toggle-sidebar
 
-  .notifications-bell
-    i#notifications.fas.fa-bell.btn(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-    .dropdown-menu(aria-labelledby='notifications')
+  .col-md-6
+    input.form-control(type='text' placeholder='Serch For Note Or To-do')
+
+  .notifications-bell.col-md-1.ml-auto
+    i#notifications.fas.fa-bell(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    .dropdown-menu.dropdown-menu-right(aria-labelledby='notifications')
+      .drop-header
+        span Notification
+        a(href="#") View All
+      .dropdown-divider
+      .drop-content
+        |content
+
+  .settings.col-md-1
+    i#settings.fas.fa-cog(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    .dropdown-menu.dropdown-menu-right(aria-labelledby='settings')
       a.dropdown-item(href='#') Action
       a.dropdown-item(href='#') Another action
       a.dropdown-item(href='#') Something else here
-
+    

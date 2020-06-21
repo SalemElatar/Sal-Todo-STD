@@ -49,10 +49,20 @@
       </div>
       <!--Start Content-Area -->
       <div class="content-area show-sidebar">
-        <div class="header"><i class="fas fa-bars toggle-sidebar"></i>
-          <input class="form-control" type="text" placeholder="Serch For Note Or To-do">
-          <div class="notifications-bell"><i class="fas fa-bell btn" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu" aria-labelledby="notifications"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+        <div class="header row">
+          <div class="col-md-1"><i class="fas fa-bars toggle-sidebar"></i></div>
+          <div class="col-md-6">
+            <input class="form-control" type="text" placeholder="Serch For Note Or To-do">
+          </div>
+          <div class="notifications-bell col-md-1 ml-auto"><i class="fas fa-bell" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
+              <div class="drop-header"><span>Notification</span><a href="#">View All</a></div>
+              <div class="dropdown-divider"></div>
+              <div class="drop-content">content</div>
+            </div>
+          </div>
+          <div class="settings col-md-1"><i class="fas fa-cog" id="settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settings"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
           </div>
         </div>
         <div class="container-fluid">
