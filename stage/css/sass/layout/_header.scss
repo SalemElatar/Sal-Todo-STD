@@ -1,20 +1,19 @@
 .content-area {
   .header{
-    .toggle-sidebar {
-      font-size: 1.5rem;
+    i{ //All Header Icons
       cursor: pointer;
-      margin: 5px 0;
+      margin: 11px 0;
+      // sidebar "Bars" Icon
+      &.fa-bars{font-size: 1.5rem;margin: 5px 0;}
     }
+
 
     >input{
       border: none;
     }
 
     .notifications-bell{
-      .fa-bell{
-        margin: 11px 0;
-        cursor: pointer;
-      }
+
       .dropdown-menu{
         padding: 10px 15px;
         margin: 0;
@@ -46,14 +45,13 @@
     }
 
     .settings{
-      .fa-cog{
-        cursor: pointer;
-        margin: 11px 0;
-      }
+
       .dropdown-menu{
         padding: 0;
         left: 40px !important;
       }
     }
+
+
   }
 }

@@ -30,6 +30,43 @@ $(function () {
   });
 
 
+  //Full Page Icon
+  var elem = document.documentElement;
+
+  $('.header .fa-expand').on("click", function () {
+    $(this).toggleClass('toggle-full-scrn')
+    if ($(this).hasClass('toggle-full-scrn')) {
+      openFullscreen();
+    } else{
+      closeFullscreen();
+    }
+  });
+
+  function openFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  }
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { /* Firefox */
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE/Edge */
+      document.msExitFullscreen();
+    }
+  }
   
-  
+
+
+
+
 });
