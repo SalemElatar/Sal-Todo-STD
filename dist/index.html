@@ -49,24 +49,66 @@
       </div>
       <!--Start Content-Area -->
       <div class="content-area show-sidebar">
-        <div class="header row">
-          <div class="col-md-1"><i class="fas fa-bars toggle-sidebar"></i></div>
-          <div class="col-md-6">
-            <input class="form-control" type="text" placeholder="Serch For Note Or To-do">
-          </div>
-          <div class="notifications-bell col-md-1 ml-auto"><i class="fas fa-bell" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
-              <div class="drop-header"><span>Notification</span><a href="#">View All</a></div>
-              <div class="dropdown-divider"></div>
-              <div class="drop-content">content</div>
+        <div class="container">
+          <div class="header row">
+            <!--sidbar menu toggle-->
+            <div class="col-md-1"><i class="fas fa-bars toggle-sidebar"></i></div>
+            <!--search bar-->
+            <div class="search-bar col-md-6">
+              <input class="form-control" type="text" placeholder="Serch For Note Or To-do">
+            </div>
+            <!--notifications-->
+            <div class="notifications-bell col-md-1 ml-auto"><i class="fas fa-bell" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifications">
+                <div class="drop-header"><span>Notification</span><a href="#">View All</a></div>
+                <div class="dropdown-divider"></div>
+                <div class="drop-content"><a class="dropdown-item row" href="#">
+                    <div class="col-md-1"><i class="fas fa-user fa-lg"></i></div>
+                    <div class="col-md-9">
+                      <h4>Henry Likes your Board</h4>
+                      <p>Lorem Blab Blab Blab Bla bB lab Blab Blab Blab </p>
+                    </div></a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item row" href="#">
+                    <div class="col-md-1"><i class="fas fa-user fa-lg"></i></div>
+                    <div class="col-md-9">
+                      <h4>Jack Starts Following you</h4>
+                      <p>Lorem Blab Blab Blab Bla bB </p>
+                    </div></a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item row" href="#">
+                    <div class="col-md-1"><i class="fas fa-user fa-lg"></i></div>
+                    <div class="col-md-9">
+                      <h4>Kate Starts Following you</h4>
+                      <p>Lorem Blab Blab Blab Bla bB lab Blab Blab</p>
+                    </div></a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item row" href="#">
+                    <div class="col-md-1"><i class="fas fa-user fa-lg"></i></div>
+                    <div class="col-md-9">
+                      <h4>Ben Shared New Teamplet</h4>
+                      <p>Lorem Blab  Bla bB lab Blab Blab Blab Blab Blab</p>
+                    </div></a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item row" href="#">
+                    <div class="col-md-1"><i class="fas fa-user fa-lg"></i></div>
+                    <div class="col-md-9">
+                      <h4>John Has New post</h4>
+                      <p>Lorem Blab Blab Blab Bla bB lab Blab Blab Blab </p>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <!-- Full Screen Icon-->
+            <div class="col-md-1"><i class="fas fa-expand"></i></div>
+            <!--settings icon-->
+            <div class="settings col-md-1"><i class="fas fa-cog" id="settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settings"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+            </div>
+            <!--User Menu-->
+            <div class="col-md-2">
+              <div class="User_menu dropdown-toggle" id="User_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="user_avatar rounded-circle" src="img/camera.jpg" alt="User Avatar"><span class="user_name">salem</span></div>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="User_menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
             </div>
           </div>
-          <div class="settings col-md-1"><i class="fas fa-cog" id="settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settings"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
-          </div>
-          <div class="col-md-1"><i class="fas fa-expand"></i></div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
           <div class="content">
             <h1>Ultimate Note</h1>
           </div>

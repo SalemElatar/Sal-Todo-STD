@@ -1,6 +1,9 @@
 $(function () {
   "use strict";
 
+  // Colors:
+  var darkBlue = "#182038";
+
   //show SideBar
   $('.content-area .toggle-sidebar, .page .sidebar .fa-times').on("click", function () {
     $('.page .sidebar, .page .content-area').toggleClass('show-sidebar');
@@ -17,7 +20,7 @@ $(function () {
   //Dark Theme toggle
   function darkToggle() {
     if ($('.sidebar-settings-menu .dark-btn').hasClass('dark-toggle')) {
-      $("html, body").css({'color': '#fff', 'background-color': '#182038'});
+      $("html, body").css({'color': '#fff', 'background-color': darkBlue});
     } else{
       $("html, body").css({'color': '#000', 'background-color': '#fff'});
     }

@@ -1,57 +1,112 @@
-.content-area {
-  .header{
-    i{ //All Header Icons
-      cursor: pointer;
-      margin: 11px 0;
-      // sidebar "Bars" Icon
-      &.fa-bars{font-size: 1.5rem;margin: 5px 0;}
+.header{
+  //Edits on Bootstrap Grid System 
+  @media (min-width: 768px){
+    >.col-md-1 {
+      -ms-flex: 0 0 8.333333%;
+      flex: 0 0 8.333333%;
+      max-width: 5.333333%;
     }
+  }
 
+  //All Header Icons
+  >div >i{ 
+    cursor: pointer;
+    margin: 11px 0;
+    // sidebar "Bars" Icon
+    &.fa-bars{font-size: 1.5rem;margin: 5px 0;}
+  }
 
-    >input{
+  //search bar
+  .search-bar{
+    input{
       border: none;
+      color: $dark-blue !important;
     }
-
-    .notifications-bell{
-
-      .dropdown-menu{
-        padding: 10px 15px;
-        margin: 0;
-        margin-top: 7px;
+  }
+  
+  //notifications
+  .notifications-bell{
+    .dropdown-menu{
+      padding: 10px 15px;
+      margin: 0;
+      margin-top: 7px;
+      color: #fff;
+      background-color: $light-blue;
+      left: 40px !important;
+      min-width:300px;
+      .drop-header{
         color: #fff;
-        background-color: #394362;
-        left: 40px !important;
-        min-width:300px;
-        .drop-header{
-          color: #fff;
-          white-space: nowrap;
-          display: block;
-          span{
-            letter-spacing: .05rem;
-          }
-          a{
-            float: $right;
+        white-space: nowrap;
+        display: block;
+        span{
+          letter-spacing: .05rem;
+        }
+        a{
+          float: $right;
+          color: $mainColor;
+          font-size: .9rem;
+          &:hover{
             color: $mainColor;
-            font-size: .9rem;
-            &:hover{
-              color: $mainColor;
-            }
           }
         }
-        .drop-content{
-          padding: 10px 0;
+      }
+      .drop-content{
+        padding: 10px 0;
+        .dropdown-divider{
+          width: 80%;
+          margin: .5rem auto;
+        }
+        .dropdown-item{
+          display: flex;
+          padding: .25rem 0;
+          color: #fff;
+          &:hover{
+            background-color: transparent !important;
+            color:#fff;
+          }
+          i{
+
+          }
+          h4{
+            margin-bottom: .1rem;
+            font-size: 1rem;
+          }
+          p{
+            white-space: break-spaces;
+            font-size: .7rem;
+            margin: 0;
+            color: rgba(230, 230, 230, 0.863);
+          }
+
         }
       }
     }
-
-    .settings{
-
-      .dropdown-menu{
-        padding: 0;
-        left: 40px !important;
-      }
-    }
-
 
   }
+  
+  //settings icon
+  .settings{
+    .dropdown-menu{
+      padding: 0;
+      left: 40px !important;
+    }
+  }
+
+  //User Menu
+  .User_menu{
+    cursor: pointer;
+    margin: 4px 0;
+
+    .user_avatar{
+      margin-right: 7px;
+      width: 38px;
+      height: 30px;
+    }
+    .user_name{
+      text-transform: capitalize;
+      font-size: 1rem;
+    }
+  }
+
+
 }

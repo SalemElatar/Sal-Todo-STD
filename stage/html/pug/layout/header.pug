@@ -1,27 +1,78 @@
-.header.row
-  .col-md-1
-    i.fas.fa-bars.toggle-sidebar
+.container
+  .header.row
+    
+    //sidbar menu toggle
+    .col-md-1
+      i.fas.fa-bars.toggle-sidebar
+    
+    //search bar
+    .search-bar.col-md-6
+      input.form-control(type='text' placeholder='Serch For Note Or To-do')
 
-  .col-md-6
-    input.form-control(type='text' placeholder='Serch For Note Or To-do')
+    //notifications
+    .notifications-bell.col-md-1.ml-auto
+      i#notifications.fas.fa-bell(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      .dropdown-menu.dropdown-menu-right(aria-labelledby='notifications')
+        .drop-header
+          span Notification
+          a(href="#") View All
+        .dropdown-divider
+        .drop-content
+          a.dropdown-item.row(href='#')
+            .col-md-1
+              i.fas.fa-user.fa-lg
+            .col-md-9
+              h4 Henry Likes your Board
+              p Lorem Blab Blab Blab Bla bB lab Blab Blab Blab 
+          .dropdown-divider
+          a.dropdown-item.row(href='#')
+            .col-md-1
+              i.fas.fa-user.fa-lg
+            .col-md-9
+              h4 Jack Starts Following you
+              p Lorem Blab Blab Blab Bla bB 
+          .dropdown-divider
+          a.dropdown-item.row(href='#')
+            .col-md-1
+              i.fas.fa-user.fa-lg
+            .col-md-9
+              h4 Kate Starts Following you
+              p Lorem Blab Blab Blab Bla bB lab Blab Blab
+          .dropdown-divider
+          a.dropdown-item.row(href='#')
+            .col-md-1
+              i.fas.fa-user.fa-lg
+            .col-md-9
+              h4 Ben Shared New Teamplet
+              p Lorem Blab  Bla bB lab Blab Blab Blab Blab Blab
+          .dropdown-divider
+          a.dropdown-item.row(href='#')
+            .col-md-1
+              i.fas.fa-user.fa-lg
+            .col-md-9
+              h4 John Has New post
+              p Lorem Blab Blab Blab Bla bB lab Blab Blab Blab 
+          
 
-  .notifications-bell.col-md-1.ml-auto
-    i#notifications.fas.fa-bell(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-    .dropdown-menu.dropdown-menu-right(aria-labelledby='notifications')
-      .drop-header
-        span Notification
-        a(href="#") View All
-      .dropdown-divider
-      .drop-content
-        |content
+    // Full Screen Icon
+    .col-md-1
+      i.fas.fa-expand
 
-  .settings.col-md-1
-    i#settings.fas.fa-cog(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-    .dropdown-menu.dropdown-menu-right(aria-labelledby='settings')
-      a.dropdown-item(href='#') Action
-      a.dropdown-item(href='#') Another action
-      a.dropdown-item(href='#') Something else here
-  
-  .col-md-1
-    i.fas.fa-expand
+    //settings icon
+    .settings.col-md-1
+      i#settings.fas.fa-cog(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      .dropdown-menu.dropdown-menu-right(aria-labelledby='settings')
+        a.dropdown-item(href='#') Action
+        a.dropdown-item(href='#') Another action
+        a.dropdown-item(href='#') Something else here
+
+    //User Menu
+    .col-md-2
+      #User_menu.User_menu(class="dropdown-toggle" data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+        img.user_avatar.rounded-circle(src="img/camera.jpg" alt="User Avatar")
+        span.user_name salem
+      .dropdown-menu.dropdown-menu-right(aria-labelledby='User_menu')
+        a.dropdown-item(href='#') Action
+        a.dropdown-item(href='#') Another action
+        a.dropdown-item(href='#') Something else here
     
