@@ -10,7 +10,7 @@
       input.form-control(type='text' placeholder='Serch For Note Or To-do')
 
     //notifications
-    .notifications-bell.col-md-1.ml-auto
+    .notifications-bell.col-md-1.ml-auto.header-dropdown
       i#notifications.fas.fa-bell(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
       .dropdown-menu.dropdown-menu-right(aria-labelledby='notifications')
         .drop-header
@@ -59,15 +59,27 @@
       i.fas.fa-expand
 
     //settings icon
-    .settings.col-md-1
+    .settings.col-md-1.header-dropdown
       i#settings.fas.fa-cog(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
       .dropdown-menu.dropdown-menu-right(aria-labelledby='settings')
-        a.dropdown-item(href='#') Action
-        a.dropdown-item(href='#') Another action
-        a.dropdown-item(href='#') Something else here
+        .drop-header 
+          span settings
+        .dropdown-divider
+        .drop-content
+          a.dropdown-item(href='#') Action
+          .dropdown-divider
+          a.dropdown-item(href='#') Another action
+          .dropdown-divider
+          a.dropdown-item(href='#') Something else here
+          .dropdown-divider
+          a.dropdown-item(href='#') Another action
+          .dropdown-divider
+          a.dropdown-item(href='#') Something
+          .dropdown-divider
+          a.dropdown-item(href='#') Something else 
 
     //User Menu
-    .col-md-2
+    .col-md-2.header-dropdown
       #User_menu.User_menu(class="dropdown-toggle" data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
         img.user_avatar.rounded-circle(src="img/camera.jpg" alt="User Avatar")
         span.user_name salem

@@ -24,8 +24,9 @@
     }
   }
   
-  //notifications
-  .notifications-bell{
+
+  //Header Dropdowns
+  .header-dropdown{
     .dropdown-menu{
       padding: 10px 15px;
       margin: 0;
@@ -34,22 +35,29 @@
       background-color: $light-blue;
       left: 40px !important;
       min-width:300px;
+      .dropdown-divider{
+        border-top: 1px solid $divider;
+      }
       .drop-header{
         color: #fff;
         white-space: nowrap;
         display: block;
         span{
           letter-spacing: .05rem;
+          text-transform: capitalize;
+          font-weight: bold;
+          font-size: 1.1rem;
         }
         a{
           float: $right;
-          color: $mainColor;
+          color: #fff;
           font-size: .9rem;
           &:hover{
             color: $mainColor;
           }
         }
       }
+
       .drop-content{
         padding: 10px 0;
         .dropdown-divider{
@@ -64,8 +72,20 @@
             background-color: transparent !important;
             color:#fff;
           }
-          i{
+        }
+      }
+    }
+  }
 
+
+  //notifications
+  .notifications-bell{
+    .dropdown-menu{
+      min-width:300px;
+      .drop-content{
+        .dropdown-item{
+          i{
+            color: $mainColor;
           }
           h4{
             margin-bottom: .1rem;
@@ -77,18 +97,28 @@
             margin: 0;
             color: rgba(230, 230, 230, 0.863);
           }
-
         }
       }
     }
-
   }
   
   //settings icon
   .settings{
     .dropdown-menu{
-      padding: 0;
-      left: 40px !important;
+      min-width:150px;
+      .drop-content{
+        .dropdown-divider{
+          width: 70%;
+          margin: .5rem 0;
+        }
+        .dropdown-item{
+          text-transform: capitalize;
+          padding: .02rem 0;
+          &:hover{
+            color:$mainColor;
+          }
+        }
+      }
     }
   }
 
