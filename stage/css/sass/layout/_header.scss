@@ -105,7 +105,7 @@
   //settings icon
   .settings{
     .dropdown-menu{
-      min-width:150px;
+      min-width:200px;
       .drop-content{
         .dropdown-divider{
           width: 70%;
@@ -114,6 +114,7 @@
         .dropdown-item{
           text-transform: capitalize;
           padding: .02rem 0;
+          font-size: 1rem;
           &:hover{
             color:$mainColor;
           }
@@ -123,20 +124,59 @@
   }
 
   //User Menu
-  .User_menu{
-    cursor: pointer;
-    margin: 4px 0;
-
-    .user_avatar{
-      margin-right: 7px;
-      width: 38px;
-      height: 30px;
+  .header-user-menu{
+    .user-meta{
+      cursor: pointer;
+      margin: 4px 0;
+      .user_avatar{
+        margin-right: 7px;
+        width: 38px;
+        height: 30px;
+      }
+      .user_name{
+        text-transform: capitalize;
+        font-size: 1rem;
+      }
     }
-    .user_name{
-      text-transform: capitalize;
-      font-size: 1rem;
+
+    .dropdown-menu{
+      .drop-header{
+        text-transform: capitalize;
+      }
+      .drop-content{
+        margin: 0 auto;
+        width: 40%;
+        .user_avatar{
+          width: 110px;
+          height: 100px;
+          cursor: pointer;
+        }
+      }
+      .drop-footer{
+        padding: 10px 0;
+        a{
+          transition: $text-hover!important;
+          color:#fff;
+          &:hover{
+            color: $mainColor;
+            div{
+              border: 1px solid $mainColor;
+            }
+          }
+          div{
+            transition: $text-hover!important;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 1px solid #1820382b;
+            i{
+              display: block;
+            }
+            span{
+              display: block;
+            }
+          }
+        }
+      }
     }
   }
-
-
 }

@@ -4,7 +4,7 @@
     //sidbar menu toggle
     .col-md-1
       i.fas.fa-bars.toggle-sidebar
-    
+
     //search bar
     .search-bar.col-md-6
       input.form-control(type='text' placeholder='Serch For Note Or To-do')
@@ -52,7 +52,6 @@
             .col-md-9
               h4 John Has New post
               p Lorem Blab Blab Blab Bla bB lab Blab Blab Blab 
-          
 
     // Full Screen Icon
     .col-md-1
@@ -66,25 +65,41 @@
           span settings
         .dropdown-divider
         .drop-content
-          a.dropdown-item(href='#') Action
+          a.dropdown-item(href='#') Share
           .dropdown-divider
-          a.dropdown-item(href='#') Another action
+          a.dropdown-item(href='#') Edit
           .dropdown-divider
-          a.dropdown-item(href='#') Something else here
+          a.dropdown-item(href='#') Edit All
           .dropdown-divider
-          a.dropdown-item(href='#') Another action
+          a.dropdown-item(href='#') learn more
           .dropdown-divider
-          a.dropdown-item(href='#') Something
+          a.dropdown-item(href='#') activity log
           .dropdown-divider
           a.dropdown-item(href='#') Something else 
 
     //User Menu
-    .col-md-2.header-dropdown
-      #User_menu.User_menu(class="dropdown-toggle" data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    .header-user-menu.col-md-2.header-dropdown
+      #User_menu.user-meta(class="dropdown-toggle" data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
         img.user_avatar.rounded-circle(src="img/camera.jpg" alt="User Avatar")
         span.user_name salem
       .dropdown-menu.dropdown-menu-right(aria-labelledby='User_menu')
-        a.dropdown-item(href='#') Action
-        a.dropdown-item(href='#') Another action
-        a.dropdown-item(href='#') Something else here
-    
+        .drop-header
+          span #{userName}
+          a(href="#") change image
+        .dropdown-divider
+        .drop-content
+          img.user_avatar.rounded-circle(src="img/camera.jpg" alt="User Avatar")
+        .dropdown-divider
+        .drop-footer.row
+          a(href='#').text-center.col
+            div
+              i.fas.fa-cog
+              span settings
+          a(href='#').text-center.col
+            div
+              i.fas.fa-cog
+              span settings
+          a(href='#').text-center.col
+            div
+              i.fas.fa-cog
+              span settings
