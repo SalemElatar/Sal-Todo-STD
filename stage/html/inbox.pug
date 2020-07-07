@@ -1,0 +1,41 @@
+include pug/vars/identity.pug
+doctype html
+html(lang="en")
+  head 
+    include pug/layout/meta
+    title Inbox
+    include pug/layout/styles
+
+  body
+    //Start Inboxpage
+    .page.inboxpage
+
+      //Start Sidebar
+      include pug/layout/sidebar
+      
+      //Start Content-Area 
+      .content-area.show-sidebar
+        include pug/layout/header
+        .container
+          .content
+            .to-do-list
+              h2 Inbox
+              input(type="text" class="txtb" placeholder="Add Your Task Here...")
+              .to-do-tasks
+                h3 tasks to do
+                .task 
+                  span.task-title to do task title
+                  i.fas.fa-check
+                  i.fas.fa-trash-alt
+                  
+              .comp-tasks
+                h3 completed tasks
+                .task 
+                  span.task-title completed task title
+                  i.fas.fa-check
+                  i.fas.fa-trash-alt
+
+            
+    
+    
+    include pug/layout/scripts.pug

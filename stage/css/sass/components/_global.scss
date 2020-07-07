@@ -41,6 +41,15 @@ a{
     &.show-sidebar{
       width: calc(100% - 250px);
     }
+
+    .content{
+      margin-top: 25px;
+      padding: 5px 20px;
+      h2{
+        margin-top: 15px;
+        margin-bottom: 7px;
+      }
+    }
     
   }
 }

@@ -1,0 +1,48 @@
+.inboxpage{
+  text-transform: capitalize;
+  .to-do-list{
+    h2{
+
+    }
+    
+    input.txtb{
+      padding: 15px 20px;
+      margin-left: 10px;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      width: 70%;
+    }
+
+    .task{
+      .task-title{}
+      color:#000;
+      font-size: 1.1rem;
+      padding: 15px 25px;
+      background-color: #fff;
+      overflow: hidden;
+      i{
+        float: $right;
+        margin-left: 20px;
+      }
+    }
+
+    >div{
+      margin-top: 20px;
+      padding: 5px 10px;
+    }
+
+    .to-do-tasks{
+
+    }
+
+    .comp-tasks{
+      .task{
+        background-color: $light-blue;
+      }
+    }
+  }
+}
