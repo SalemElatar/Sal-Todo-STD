@@ -12,7 +12,7 @@
     // Notifications
     .notifications-bell.header-dropdown.col-md-1.ml-auto
       i#notifications.fas.fa-bell(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-      .dropdown-menu.dropdown-menu-right(aria-labelledby='notifications')
+      #Dropdown.dropdown-menu.dropdown-menu-right(aria-labelledby='notifications' mdbDropdown [autoClose]="false")
         // Dropdown Header
         .drop-header
           span Notification
@@ -63,7 +63,7 @@
     // Settings Icon
     .settings.header-dropdown.col-md-1
       i#settings.fas.fa-cog(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-      .dropdown-menu.dropdown-menu-right(aria-labelledby='settings')
+      #Dropdown2.dropdown-menu.dropdown-menu-right(aria-labelledby='settings')
         //Dropdown Header
         .drop-header 
           span settings
@@ -88,7 +88,7 @@
       #User_menu.user-meta(class="dropdown-toggle" data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
         img.user_avatar.rounded-circle(src="img/camera.jpg" alt="User Avatar")
         span.user_name salem
-      .dropdown-menu.dropdown-menu-right(aria-labelledby='User_menu')
+      #Dropdown3.dropdown-menu.dropdown-menu-right(aria-labelledby='User_menu')
         // Dropdown Header
         .drop-header
           span #{userName}

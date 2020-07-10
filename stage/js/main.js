@@ -69,7 +69,49 @@ $(function () {
   }
   
 
+  // Prevents menu from closing when clicked inside 
+  document.getElementById("Dropdown").addEventListener('click', function (event) { 
+    event.stopPropagation(); 
+  });
+  document.getElementById("Dropdown2").addEventListener('click', function (event) { 
+    event.stopPropagation(); 
+  });
+  document.getElementById("Dropdown3").addEventListener('click', function (event) { 
+    event.stopPropagation(); 
+  });
 
+
+  //To-Do List Function
+  $('.to-do-list .txtb').on("keyup", function (e) {
+    //13 Means Enter Button
+    if(e.keyCode == 13 && $('.to-do-list .txtb').val() != ""){
+      
+      var task = $('<div class="task"> </div>').text($('.to-do-list .txtb').val());
+      var del = $('<i class="fas fa-trash-alt"></i>').click(function () {
+        var p = $(this).parent()
+        p.fadeOut(function () {
+          p.remove()
+        })
+      })
+      var check = $('<i class="fas fa-check"></i>').click(function () {
+        var p = $(this).parent()
+        p.fadeOut(function () {
+          $('.comp-tasks').append(p)
+          p.fadeIn();
+        })
+        $(this).remove()
+      })
+
+      task.append(check, del);
+      $('.to-do-list .to-do-tasks').append(task);
+
+      //To Clear Input
+      $('.to-do-list .txtb').val("");
+
+
+
+    }
+  })
 
 
 });

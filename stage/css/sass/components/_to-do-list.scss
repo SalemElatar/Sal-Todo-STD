@@ -1,0 +1,50 @@
+.to-do-list{
+  h2{
+
+  }
+  
+
+  .txtb{
+    
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 70%;
+  }
+
+  .task{
+    margin-bottom: 20px;
+    .task-title{}
+    color:#000;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    background-color: #fff;
+    overflow: hidden;
+    i{
+      cursor: pointer;
+      float: $right;
+      margin-left: 20px;
+    }
+  }
+
+  >div{
+    margin-top: 20px;
+    padding: 5px 10px;
+  }
+
+  .to-do-tasks{
+    margin-bottom: 30px;
+  }
+
+  .comp-tasks{
+    .task{
+      background-color: $light-blue;
+    }
+  }
+}
