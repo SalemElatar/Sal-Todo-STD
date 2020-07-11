@@ -86,7 +86,7 @@ $(function () {
     //13 Means Enter Button
     if(e.keyCode == 13 && $('.to-do-list .txtb').val() != ""){
       
-      var task = $('<div class="task"> </div>').text($('.to-do-list .txtb').val());
+      var task = $('<div class="task"></div>').text($('.to-do-list .txtb').val());
       var del = $('<i class="fas fa-trash-alt"></i>').click(function () {
         var p = $(this).parent()
         p.fadeOut(function () {
@@ -103,14 +103,18 @@ $(function () {
       })
 
       task.append(check, del);
+
       $('.to-do-list .to-do-tasks').append(task);
 
       //To Clear Input
       $('.to-do-list .txtb').val("");
-
-
-
     }
+  })
+
+  //Pomo Functions
+  $(".to-do-tasks .pomo-tasks i").on("click", function () {
+    var pomo = '<div class="new-pomo"><span>25:00</span></div>';
+    $(this).parent().append(pomo)
   })
 
 

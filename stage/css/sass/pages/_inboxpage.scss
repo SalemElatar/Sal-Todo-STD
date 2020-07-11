@@ -1,4 +1,22 @@
 .inboxpage{
   text-transform: capitalize;
-  
+  .sidebar{
+    .sidebar-pages-menu{
+      >li{
+        &:last-of-type{
+          a{
+            color: $mainColor;
+          }
+          .sidebar-subPages-menu{
+            li:first-of-type{
+              border-left: 3px solid #88cb5e;
+              a{
+                color: $mainColor;
+              }
+            }
+          }
+        }
+      } 
+    }
+  }
 }
