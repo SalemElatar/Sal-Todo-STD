@@ -86,7 +86,7 @@ $(function () {
     //13 Means Enter Button
     if(e.keyCode == 13 && $('.to-do-list .txtb').val() != ""){
       
-      var task = $('<div class="task"></div>').text($('.to-do-list .txtb').val());
+      var task = $('<div class="task"></div></div>').text($('.to-do-list .txtb').val());
       var del = $('<i class="fas fa-trash-alt"></i>').click(function () {
         var p = $(this).parent()
         p.fadeOut(function () {
@@ -101,9 +101,43 @@ $(function () {
         })
         $(this).remove()
       })
+      //Pomo Functions
+      var pomo = $('<i class="fas fa-plus-circle"></i>').click(function () {
+        var newPomo = '<div class="new-pomo"><span class="timer">25:00</span></div>';
+        $(this).parent().append(newPomo)
+        //Limit the Pomos Number & Make "Add" Icon Unclickable
+        if ($('.new-pomo').length > 3 ) {
+          $(".task .fa-plus-circle").unbind("click").css("color", "#000");
+        }
 
-      task.append(check, del);
+        //Set a timer to 25 minutes
+        $(".task .new-pomo").on("click", function () {
+          var counter = 0
+          var timeLeft = 1500
 
+          function convertsec(s){
+            var mins = Math.floor(s / 60);
+            var sec = s % 60;
+            return mins + ":" + sec
+          }
+
+          var timer = $(".task .new-pomo .timer")
+          timer.html(convertsec(timeLeft - counter))
+
+          function pomoTime() {
+            counter++
+            timer.html(convertsec(timeLeft - counter))
+          }
+
+          setInterval(pomoTime, 1000);
+        })
+
+
+
+      })
+      
+      //Appending
+      task.append(pomo, check, del);
       $('.to-do-list .to-do-tasks').append(task);
 
       //To Clear Input
@@ -111,11 +145,8 @@ $(function () {
     }
   })
 
-  //Pomo Functions
-  $(".to-do-tasks .pomo-tasks i").on("click", function () {
-    var pomo = '<div class="new-pomo"><span>25:00</span></div>';
-    $(this).parent().append(pomo)
-  })
+
+
 
 
 });

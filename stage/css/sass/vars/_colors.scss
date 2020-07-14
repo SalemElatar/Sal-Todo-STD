@@ -1,3 +1,19 @@
+// $themes: (
+//   green-theme: (color:#348801);
+//   blue-theme: (color: #182038);
+// );
+
+// @each $theme, $map in $theme {
+//   .#{$themes} {
+//     .className{
+//       color: map-get($map, color);
+//     }
+//   }
+// }
+
+
+
+
 $mainColor : #88cb5e;
 $sub-mainColor : #348801;
 
@@ -10,3 +26,4 @@ $greyColor : rgba(239, 239, 239, 0.986);
 $divider : #1820385c;
 
 $plcHldColor: rgba(255, 255, 255, 0.644);
+
