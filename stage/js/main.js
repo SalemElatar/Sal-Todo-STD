@@ -101,40 +101,54 @@ $(function () {
         })
         $(this).remove()
       })
-      //Pomo Functions
       var pomo = $('<i class="fas fa-plus-circle"></i>').click(function () {
         var newPomo = '<div class="new-pomo"><span class="timer">25:00</span></div>';
         $(this).parent().append(newPomo)
         //Limit the Pomos Number & Make "Add" Icon Unclickable
         if ($('.new-pomo').length > 3 ) {
           $(".task .fa-plus-circle").unbind("click").css("color", "#000");
+          $(".task .fa-plus-circle").css("cursor", "none");
         }
 
         //Set a timer to 25 minutes
-        $(".task .new-pomo").on("click", function () {
-          var counter = 0
-          var timeLeft = 1500
+        $(this).siblings(".new-pomo").on("click", function () {
+            var timeLeft = 1500
+            var timer = $(this).find(".timer");
 
-          function convertsec(s){
-            var mins = Math.floor(s / 60);
-            var sec = s % 60;
-            return mins + ":" + sec
-          }
+            var countDown = setInterval(function () {
+              "use strict"
+              secondPass();
+            }, 1000);
 
-          var timer = $(".task .new-pomo .timer")
-          timer.html(convertsec(timeLeft - counter))
+            function secondPass() {
+              var mins = Math.floor(timeLeft / 60);
+              var sec = timeLeft % 60;
 
-          function pomoTime() {
-            counter++
-            timer.html(convertsec(timeLeft - counter))
-          }
+              if (sec < 10){
+                sec = "0" + sec;
+              }
 
-          setInterval(pomoTime, 1000);
+              if (mins < 10){
+                mins = "0" + mins
+              }
+
+              timer.html(mins + ":" + sec)
+            
+
+              if (timeLeft > 0) {
+                timeLeft = timeLeft - 1;
+              } else {
+                clearInterval(countDown);
+                timer.html("Done")
+                $('.new-pomo').css("background-color", "#88cb5e")
+              }
+            }
         })
 
 
 
       })
+
       
       //Appending
       task.append(pomo, check, del);
@@ -144,9 +158,6 @@ $(function () {
       $('.to-do-list .txtb').val("");
     }
   })
-
-
-
 
 
 });

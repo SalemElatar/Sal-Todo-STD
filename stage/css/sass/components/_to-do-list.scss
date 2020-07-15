@@ -38,8 +38,10 @@
   }
 
   .to-do-tasks{
+    .div2{border: 1px solid #000; width: 20px; height: 50px;}
     // .pomo-tasks{display:inline;}
     .new-pomo{
+      cursor: pointer;
       margin: 0px 5px;
       display: inline;
       border-radius: 20%;
