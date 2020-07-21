@@ -3,12 +3,12 @@ doctype html
 html(lang="en")
   head 
     include pug/layout/meta
-    title Inbox
+    title archive
     include pug/layout/styles
 
   body
     //Start Inboxpage
-    .page.inboxpage
+    .page.archivepage
 
       //Start Sidebar
       include pug/layout/sidebar
@@ -18,7 +18,7 @@ html(lang="en")
         include pug/layout/header
         .container
           .content
-            include pug/components/Dayplanner
+            .arch-tasks
             
 
             

@@ -1,0 +1,65 @@
+.tasks-list{
+  .add-task{
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 70%;
+  }
+
+  >div{  //.to-do-tasks & .comp-tasks
+    margin: 30px 0;
+    padding: 5px 10px;
+  }
+
+  .newtask{
+    margin-bottom: 20px;
+    color:#000;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    background-color: #fff;
+    overflow: hidden;
+    i{
+      cursor: pointer;
+      float: $right;
+      margin-left: 20px;
+      color: $mainColor;
+    }
+  }
+
+  .to-do-tasks{}
+
+  .comp-tasks{
+    .newtask{background-color: $light-blue;}
+    i{color:#000;}
+  }
+
+  .Today-sessions{
+    .work-session{
+      background-color: #fff;
+      color: #000;
+      padding: 15px 25px;
+      margin: 25px 0;
+      i{
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .new-session{
+        cursor: pointer;
+        margin: 0px 5px;
+        display: inline;
+        border-radius: 20%;
+        background-color: #394362;
+        color: #ffffff;
+        padding: 7px 11px;
+      }
+    }
+  }
+  
+
+}

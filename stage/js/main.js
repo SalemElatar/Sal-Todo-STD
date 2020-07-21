@@ -82,11 +82,11 @@ $(function () {
 
 
   //To-Do List Function
-  $('.to-do-list .txtb').on("keyup", function (e) {
+  $('.to-do-list-app1 .txtb').on("keyup", function (e) {
     //13 Means Enter Button
-    if(e.keyCode == 13 && $('.to-do-list .txtb').val() != ""){
+    if(e.keyCode == 13 && $('.to-do-list-app1 .txtb').val() != ""){
       
-      var task = $('<div class="task"></div></div>').text($('.to-do-list .txtb').val());
+      var task = $('<div class="task"></div></div>').text($('.to-do-list-app1 .txtb').val());
       var del = $('<i class="fas fa-trash-alt"></i>').click(function () {
         var p = $(this).parent()
         p.fadeOut(function () {
@@ -106,15 +106,14 @@ $(function () {
         $(this).parent().append(newPomo)
         //Limit the Pomos Number & Make "Add" Icon Unclickable
         if ($('.new-pomo').length > 3 ) {
-          $(".task .fa-plus-circle").unbind("click").css("color", "#000");
-          $(".task .fa-plus-circle").css("cursor", "none");
+          $(this).unbind("click").css("color", "#000");
+          $(this).css("cursor", "none");
         }
 
         //Set a timer to 25 minutes
         $(this).siblings(".new-pomo").on("click", function () {
             var timeLeft = 1500
             var timer = $(this).find(".timer");
-
             var countDown = setInterval(function () {
               "use strict"
               secondPass();
@@ -134,7 +133,6 @@ $(function () {
 
               timer.html(mins + ":" + sec)
             
-
               if (timeLeft > 0) {
                 timeLeft = timeLeft - 1;
               } else {
@@ -144,20 +142,123 @@ $(function () {
               }
             }
         })
-
-
-
       })
-
       
       //Appending
       task.append(pomo, check, del);
-      $('.to-do-list .to-do-tasks').append(task);
+      $('.to-do-list-app1 .to-do-tasks').append(task);
 
       //To Clear Input
-      $('.to-do-list .txtb').val("");
+      $('.to-do-list-app1 .txtb').val("");
     }
   })
+
+
+
+  
+
+  //Today's Planner Functions
+  $('.tasks-list .add-task').on("keyup", function (e) {
+    //13 Means Enter Button
+    if(e.keyCode == 13 && $('.tasks-list .add-task').val() != ""){
+      
+      var newTask = $('<div class="newtask"></div>').text($('.tasks-list .add-task').val());
+      var delTask = $('<i class="fas fa-trash-alt"></i>').click(function () {
+        var T = $(this).parent()
+        T.fadeOut(function () {
+          T.remove()
+        })
+        //Limit Tasks Number to 4 
+        if ($('.newtask').length > 4 ) {
+          $('.tasks-list .add-task').attr('disabled', 'disabled');
+        } else{
+          $('.tasks-list .add-task').removeAttr('disabled');
+        }
+      })
+      var checkTask = $('<i class="fas fa-check"></i>').click(function () {
+        var C = $(this).parent()
+        C.fadeOut(function () {
+          $('.tasks-list .comp-tasks').append(C)
+          C.fadeIn();
+        })
+        $(this).remove()
+      })
+      
+      //Appending
+      newTask.append(checkTask, delTask);
+      $('.tasks-list .to-do-tasks').append(newTask);
+      
+    
+      //Limit Tasks Number to 4 
+      if ($('.newtask').length > 3 ) {
+        $('.tasks-list .add-task').attr('disabled', 'disabled');
+        alert("Max Tasks For day is 4")
+      } else{
+        $('.tasks-list .add-task').removeAttr('disabled');
+      }
+      
+      
+      //To Clear Input
+      $('.tasks-list .add-task').val("");
+    }
+  })
+  
+  
+  //Add Timer To a Session
+  $('.tasks-list .Today-sessions .work-session i.fas.fa-plus-circle').on("click", function () {
+    var newTimer = '<div class="new-session"><span class="timer">25:00</span></div>';
+    $(this).parent().append(newTimer);
+    
+    //Limit the Pomos Number & Make "Add" Icon Unclickable
+    if ($('.new-session').length > 2 ) {
+      $(this).unbind("click").css("color", "#000");
+      $(this).css("cursor", "text");
+    }
+
+    //Set a timer to 25 minutes
+    $(this).siblings(".new-session").on("click", function () {
+        var timeLeft = 1500
+        var timer = $(this).find(".timer");
+        var countDown = setInterval(function () {
+          "use strict"
+          secondPass();
+        }, 1000);
+  
+        function secondPass() {
+          var mins = Math.floor(timeLeft / 60);
+          var sec = timeLeft % 60;
+  
+          if (sec < 10){
+            sec = "0" + sec;
+          }
+  
+          if (mins < 10){
+            mins = "0" + mins
+          }
+  
+          timer.html(mins + ":" + sec)
+        
+          if (timeLeft > 0) {
+            timeLeft = timeLeft - 1;
+          } else {
+            clearInterval(countDown);
+            timer.html("Done")
+            $('.new-session').css("background-color", "#88cb5e")
+          }
+        }
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
