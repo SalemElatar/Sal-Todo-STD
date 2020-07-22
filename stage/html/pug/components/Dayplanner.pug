@@ -1,9 +1,22 @@
 .tasks-list
   h5 oday's Tasks
-  input(type="text" class="add-task" placeholder="Add Your Task Here... (Max 3)")
+  input(type="text" class="add-task" placeholder="Add Your Task Here... (Max 4)")
+  select#priorty(name="priorty")
+    option(value="priorty 1") priorty 1
+    option(value="priorty 2") priorty 2
+    option(value="priorty 3") priorty 3
+    option(value="priorty 4") priorty 4
+
   .to-do-tasks
     h4 tasks to do
+    .priorty1-task
+    .priorty2-task
+    .priorty3-task
+    .priorty4-task
+
   .comp-tasks
+
+
 
   .Today-sessions
     .work-session

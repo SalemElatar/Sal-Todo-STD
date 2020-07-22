@@ -163,6 +163,8 @@ $(function () {
     if(e.keyCode == 13 && $('.tasks-list .add-task').val() != ""){
       
       var newTask = $('<div class="newtask"></div>').text($('.tasks-list .add-task').val());
+      
+      
       var delTask = $('<i class="fas fa-trash-alt"></i>').click(function () {
         var T = $(this).parent()
         T.fadeOut(function () {
@@ -184,9 +186,23 @@ $(function () {
         $(this).remove()
       })
       
-      //Appending
+      //Appending & Sorting
+      var value = $("#priorty option:selected").val();
+      
+      if(value == "priorty 1") {
+        $('.tasks-list .to-do-tasks .priorty1-task').append(newTask);
+      } else if(value == "priorty 2") {
+        $('.tasks-list .to-do-tasks .priorty2-task').append(newTask);
+      } else if(value == "priorty 3") {
+        $('.tasks-list .to-do-tasks .priorty3-task').append(newTask);
+      } else if(value == "priorty 4") {
+        $('.tasks-list .to-do-tasks .priorty4-task').append(newTask);
+      }
+      
+      
+
       newTask.append(checkTask, delTask);
-      $('.tasks-list .to-do-tasks').append(newTask);
+      
       
     
       //Limit Tasks Number to 4 
@@ -196,13 +212,16 @@ $(function () {
       } else{
         $('.tasks-list .add-task').removeAttr('disabled');
       }
-      
-      
+
+
+      // Sort Tasks By Pirorty 
+        
+          
       //To Clear Input
       $('.tasks-list .add-task').val("");
+
     }
   })
-  
   
   //Add Timer To a Session
   $('.tasks-list .Today-sessions .work-session i.fas.fa-plus-circle').on("click", function () {
