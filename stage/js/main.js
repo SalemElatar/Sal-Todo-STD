@@ -154,10 +154,8 @@ $(function () {
   })
 
 
-
-  
-
-  //Today's Planner Functions
+//========================================================================
+  //Tasks : Today's Planner Functions
   $('.tasks-list .add-task').on("keyup", function (e) {
     //13 Means Enter Button
     if(e.keyCode == 13 && $('.tasks-list .add-task').val() != ""){
@@ -188,7 +186,6 @@ $(function () {
       
       //Appending & Sorting
       var value = $("#priorty option:selected").val();
-      
       if(value == "priorty 1") {
         $('.tasks-list .to-do-tasks .priorty1-task').append(newTask);
       } else if(value == "priorty 2") {
@@ -199,13 +196,10 @@ $(function () {
         $('.tasks-list .to-do-tasks .priorty4-task').append(newTask);
       }
       
-      
-
       newTask.append(checkTask, delTask);
       
-      
     
-      //Limit Tasks Number to 4 
+      //Limit Tasks Number to Just 4 
       if ($('.newtask').length > 3 ) {
         $('.tasks-list .add-task').attr('disabled', 'disabled');
         alert("Max Tasks For day is 4")
@@ -223,55 +217,110 @@ $(function () {
     }
   })
   
-  //Add Timer To a Session
+  //Work Sessions : Add Timer To a Session
   $('.tasks-list .Today-sessions .work-session i.fas.fa-plus-circle').on("click", function () {
-    var newTimer = '<div class="new-session"><span class="timer">25:00</span></div>';
+    var newTimer = '<div class="col-md-3"><div class="new-session"><span class="timer">25:00</span></div></div>';
     $(this).parent().append(newTimer);
-    
+
+    var pomosNum = $('#pomoNum option:selected').val();
+
+    if ($('.new-session').length > pomosNum - 1) {
+      $('.work-session i.fas.fa-plus-circle').unbind("click").css("color", "#000");
+    }
+
+    console.log(pomosNum)
+
     //Limit the Pomos Number & Make "Add" Icon Unclickable
-    if ($('.new-session').length > 2 ) {
+    if ($(this).parent().find('.new-session').length > 2 ) {
       $(this).unbind("click").css("color", "#000");
       $(this).css("cursor", "text");
     }
 
     //Set a timer to 25 minutes
-    $(this).siblings(".new-session").on("click", function () {
-        var timeLeft = 1500
-        var timer = $(this).find(".timer");
-        var countDown = setInterval(function () {
-          "use strict"
-          secondPass();
-        }, 1000);
-  
-        function secondPass() {
-          var mins = Math.floor(timeLeft / 60);
-          var sec = timeLeft % 60;
-  
-          if (sec < 10){
-            sec = "0" + sec;
-          }
-  
-          if (mins < 10){
-            mins = "0" + mins
-          }
-  
-          timer.html(mins + ":" + sec)
-        
-          if (timeLeft > 0) {
-            timeLeft = timeLeft - 1;
-          } else {
-            clearInterval(countDown);
-            timer.html("Done")
-            $('.new-session').css("background-color", "#88cb5e")
-          }
+    $(this).siblings().find(".new-session").on("click", function () {
+      var timeLeft = 1500
+      var newSession = $(this);
+      var timer = $(this).find(".timer");
+      var countDown = setInterval(function () {
+        "use strict"
+        secondPass();
+      }, 1000);
+
+      function secondPass() {
+        var mins = Math.floor(timeLeft / 60);
+        var sec = timeLeft % 60;
+
+        if (sec < 10){
+          sec = "0" + sec;
         }
+
+        if (mins < 10){
+          mins = "0" + mins
+        }
+
+        timer.html(mins + ":" + sec)
+      
+        if (timeLeft > 0) {
+          timeLeft = timeLeft - 1;
+        } else {
+          clearInterval(countDown);
+          timer.html("Done");
+          newSession.css("background-color", "#88cb5e").unbind("click");
+        }
+      }
     })
   })
 
+  //Breaks Sessions : User Set the timer by himself
+  $('.tasks-list .Today-sessions .break-session .timer-session').on("click", function () {
+
+    var doingNow = $(this).parent().find('.doing-now');
+    var selectVal = $("#smthngfun option:selected").val();
+    doingNow.html(selectVal)
+
+    $("#smthngfun").prop('disabled', 'disabled');
+
+    //Set a timer to 25 minutes
+      var timeLeft = 2
+      var timersession = $(this);
+      var timer = $(this).find(".timer");
+      var countDown = setInterval(function () {
+        "use strict"
+        secondPass();
+      }, 1000);
+
+      function secondPass() {
+        var mins = Math.floor(timeLeft / 60);
+        var sec = timeLeft % 60;
+
+        if (sec < 10){
+          sec = "0" + sec;
+        }
+
+        if (mins < 10){
+          mins = "0" + mins
+        }
+
+        timer.html(mins + ":" + sec)
+      
+        if (timeLeft > 0) {
+          timeLeft = timeLeft - 1;
+        } else {
+          clearInterval(countDown);
+          timer.html("Done");
+          timersession.css("background-color", "#88cb5e").unbind("click");
+        }
+      }
+  })
+//========================================================================
 
 
 
 
+$('.sidebar .sidebar-pages-menu li .sidebar-subPages-menu .arc').on("click", function () {
+  $('.content').fadeOut(400);
+  $('.archive_page').fadeIn(400)
+})
 
 
 

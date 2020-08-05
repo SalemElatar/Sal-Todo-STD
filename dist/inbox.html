@@ -36,7 +36,7 @@
             <ul class="list-unstyled sidebar-subPages-menu">
               <li> <a href="inbox.html">Inbox</a></li>
               <li> <a href="ToDoList1.html">ToDo List APP1</a></li>
-              <li> <a href="archive.html">Archive</a></li>
+              <li class="arc"><a href="#">Archive</a></li>
             </ul>
           </li>
         </ul>
@@ -154,19 +154,24 @@
               </div>
               <div class="comp-tasks"></div>
               <div class="Today-sessions">
-                <div class="work-session"><i class="fas fa-plus-circle"></i></div>
-                <div class="work-session">
-                  <p>Do Something Funny</p>
+                <lable>How many Sessions you want to do Today </lable>
+                <select id="pomoNum" name="pomoNum">
+                  <option value="8">8 Sessions</option>
+                  <option value="12">12 Sessions</option>
+                  <option value="16">16 Sessions</option>
+                </select>
+                <div class="work-session row">
+                  <div class="progress"></div><i class="fas fa-plus-circle col-md-1"></i>
                 </div>
-                <div class="work-session"><i class="fas fa-plus-circle"></i></div>
-                <div class="work-session">
-                  <p>Do Something Funny</p>
+                <div class="work-session break-session">
+                  <select id="smthngfun" name="smthngfun">
+                    <option value="read quran">Read Quran</option>
+                    <option value="read book">Read Book</option>
+                    <option value="Podcast">Podcast</option>
+                    <option value="workout">Workout</option>
+                  </select>
+                  <div class="timer-session"> <span class="timer">25:00</span></div><span class="doing-now">test      </span>
                 </div>
-                <div class="work-session"><i class="fas fa-plus-circle"></i></div>
-                <div class="work-session">
-                  <p>Do Something Funny</p>
-                </div>
-                <div class="work-session"><i class="fas fa-plus-circle"></i></div>
               </div>
             </div>
           </div>

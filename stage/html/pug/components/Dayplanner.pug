@@ -13,24 +13,29 @@
     .priorty2-task
     .priorty3-task
     .priorty4-task
-
   .comp-tasks
 
-
-
   .Today-sessions
-    .work-session
-      i.fas.fa-plus-circle
-    .work-session
-      p Do Something Funny
-    .work-session
-      i.fas.fa-plus-circle
-    .work-session
-      p Do Something Funny
-    .work-session
-      i.fas.fa-plus-circle
-    .work-session
-      p Do Something Funny
-    .work-session
-      i.fas.fa-plus-circle
-      
+    //- How many Sessions
+    lable How many Sessions you want to do Today 
+    select#pomoNum(name="pomoNum")
+      option(value= 8) 8 Sessions
+      option(value= 12) 12 Sessions
+      option(value= 16) 16 Sessions
+
+    //- Work Sessions
+    .work-session.row
+      .progress
+      i.fas.fa-plus-circle.col-md-1
+    
+    //- Break Session
+    .work-session.break-session
+      select#smthngfun(name="smthngfun")
+        option(value= 'read quran') Read Quran
+        option(value= 'read book') Read Book
+        option(value= 'Podcast') Podcast
+        option(value= 'workout') Workout
+      .timer-session 
+        span.timer 25:00
+      span.doing-now test      
+
