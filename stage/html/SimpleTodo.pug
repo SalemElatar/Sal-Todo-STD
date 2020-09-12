@@ -3,12 +3,12 @@ doctype html
 html(lang="en")
   head 
     include pug/layout/meta
-    title Inbox
+    title Simple To-Do
     include pug/layout/styles
 
   body
     //Start Inboxpage
-    .page.inboxpage
+    .page.Todo1page
 
       //Start Sidebar
       include pug/layout/sidebar
@@ -18,7 +18,7 @@ html(lang="en")
         include pug/layout/header
         .container
           .content
-            include pug/components/Dayplanner
+            include pug/components/to-do-list-app1
             
 
             
