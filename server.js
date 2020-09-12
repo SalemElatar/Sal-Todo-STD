@@ -5,5 +5,5 @@ var server = new StaticServer({
 });
 
 server.start(function () {
-  console.log('Server at port ', server.port);
+  console.log('Server started at port ', server.port);
 });

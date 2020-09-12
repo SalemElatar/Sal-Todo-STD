@@ -1,7 +1,7 @@
 {
-  "name": "Ultimate Note",
+  "name": "STD",
   "version": "1.0.0",
-  "description": "Ultimate Note Project",
+  "description": "Salem's Todo List Website Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "Salem",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^4.0.2",
@@ -17,7 +17,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "gulp-zip": "^5.0.1",
+    "gulp-zip": "^5.0.2",
     "static-server": "^2.2.1"
   },
   "dependencies": {}
